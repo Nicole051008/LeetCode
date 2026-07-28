@@ -4,10 +4,10 @@ public:
         string s = to_string(x);
         int len = s.length();
         for (int i = 0; i < len; i++){
-            if i == len/2{
+            if (i == len/2){
                 return true;
             }
-            if x[i] != x[-i+1]{
+            if (x[i] != x[-i+1]){
                 return false;
             }
         }
