@@ -7,7 +7,7 @@ public:
             if (i == len/2){
                 return true;
             }
-            if (x[i] != x[-i+1]){
+            if (s[i] != s[-i+1]){
                 return false;
             }
         }
