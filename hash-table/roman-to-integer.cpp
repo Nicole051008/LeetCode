@@ -13,7 +13,7 @@ public:
         };
         
         int total = 0;
-        int n = s.length();
+        int len = s.length();
 
         for (int i = 0; i < len - 1; i++){
             string cur = roman_map[s[i]];
@@ -25,6 +25,7 @@ public:
                 total += cur;
             }
         }
+        total += roman_map[s[len - i - 1]]
         return total;
     }
 };
