@@ -25,7 +25,7 @@ public:
                 total += cur;
             }
         }
-        total += roman_map[s[len]];
+        total += roman_map[s[len - 1]];
         return total;
     }
 };
