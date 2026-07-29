@@ -15,16 +15,17 @@ public:
         int total = 0;
         int len = s.length();
 
-        for (int i = 0; i < len; i++){
+        for (int i = 0; i < len - 1; i++){
             int cur = roman_map[s[i]];
             int next = roman_map[s[i+1]];
-            if ((i != len - 1) && cur < next) {
+            if (cur < next) {
                 total -= cur;
             }
             else {
                 total += cur;
             }
         }
+        total += roman_map[s[len]];
         return total;
     }
 };
