@@ -1,7 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        int romanToInt(string s) {
+
         unordered_map<char, int> roman_map = {
             {'I', 1},
             {'V', 5},
@@ -16,8 +16,8 @@ public:
         int n = s.length();
 
         for (int i = 0; i < len - 1; i++){
-            string cur = romanToInt(s[i]);
-            string next = romanToInt(s[i+1]);
+            string cur = roman_map[s[i]];
+            string next = roman_map[s[i+1]];
             if (cur < next) {
                 total -= cur;
             }
