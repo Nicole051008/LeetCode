@@ -18,7 +18,7 @@ public:
         for (int i = 0; i < len - 1; i++){
             int cur = roman_map[s[i]];
             int next = roman_map[s[i+1]];
-            if (cur < next) {
+            if ((i < len - 1) && cur < next) {
                 total -= cur;
             }
             else {
