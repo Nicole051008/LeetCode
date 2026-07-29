@@ -16,8 +16,8 @@ public:
         int len = s.length();
 
         for (int i = 0; i < len - 1; i++){
-            string cur = roman_map[s[i]];
-            string next = roman_map[s[i+1]];
+            int cur = roman_map[s[i]];
+            int next = roman_map[s[i+1]];
             if (cur < next) {
                 total -= cur;
             }
