@@ -16,11 +16,11 @@ public:
 
         while (list1 != nullptr && list2 != nullptr) {
             if (list1 -> val >= list2 -> val){
-                tail -> next = list1 -> val;
+                tail -> next = list1;
                 list1 = list1 -> next;
             }
             else {
-                tail -> next = list2 -> val;
+                tail -> next = list2;
                 list2 = list2 -> next;
             }
         }
