@@ -7,7 +7,7 @@ public:
         result.emplace_back(nums[0]);
         int temp = nums[0];
         for (int i = 1; i < len; i ++){
-            if nums[i] != temp {
+            if (nums[i] != temp) {
                 result.emplace_back(nums[i]);
                 int temp = nums[i];
             }
