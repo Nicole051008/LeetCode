@@ -8,8 +8,7 @@ public:
                 if (s[j] == s[i]) {
                     break;
                 }
-            }
-            if (j == len - 1){
+                if (j == len - 1){
                 return false;
             }
         }
