@@ -1,6 +1,7 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
+        int len = std::size(nums);
         int unique = 1;
         vector<int> result;
         result.emplace_back(nums[0]);
