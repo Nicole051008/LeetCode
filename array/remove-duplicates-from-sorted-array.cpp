@@ -3,15 +3,15 @@ public:
     int removeDuplicates(vector<int>& nums) {
         int len = std::size(nums);
         int unique = 1;
-        vector<int> result;
-        result.emplace_back(nums[0]);
-        int temp = nums[0];
+        int pointer = 1; 
+        int temp = nums[1];
         for (int i = 1; i < len; i ++){
             if (nums[i] != temp) {
-                result.emplace_back(nums[i]);
+                nums[pointer] = nums[i];
+                pointer ++;
                 int temp = nums[i];
             }
         }
-        return result;
+        return ;
     }
 };
