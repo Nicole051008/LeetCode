@@ -20,7 +20,7 @@ public:
             }
 
             flag = sum/2;
-            cur = sum %2;
+            int cur = sum %2;
             result.push_back(cur + '0');
 
         }
