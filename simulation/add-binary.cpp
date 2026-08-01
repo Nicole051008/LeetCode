@@ -21,7 +21,7 @@ public:
 
             flag = sum/2;
             int cur = sum %2;
-            result.push_back(cur + '0');
+            result.insert(result.begin(), cur + '0');
 
         }
         return result;
