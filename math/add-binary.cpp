@@ -6,7 +6,7 @@ public:
         int flag = 0;
         string result = "";
         
-        while ( pa >= 0 || pb >= 0 || flag >0){
+        while ( pa >= 0 || pb >= 0 || flag > 0){
             int sum = flag;
 
             if (pa >= 0) {
@@ -15,7 +15,7 @@ public:
             }
 
             if (pb >= 0){
-                sum += b[pb] = '0';
+                sum += b[pb] - '0';
                 pb--;
             }
 
