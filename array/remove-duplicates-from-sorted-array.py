@@ -6,7 +6,7 @@ class Solution(object):
         """
 
         result = []
-        temp = x
+        temp = None
         for cur in nums:
             if cur != temp:
                 result.append(cur)
