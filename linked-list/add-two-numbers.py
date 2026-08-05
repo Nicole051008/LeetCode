@@ -22,7 +22,7 @@ class Solution(object):
         for i in l1:
 
             for j in l2:
-                 temp = i + j
+                temp = i + j
 
                 if flag == 1:
                     temp = 1 + i + j
