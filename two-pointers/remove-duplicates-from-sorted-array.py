@@ -5,11 +5,14 @@ class Solution(object):
         :rtype: int
         """
 
-        result = []
+        pointer = 0
         temp = None
-        for cur in nums:
-            if cur != temp:
-                result.append(cur)
-                temp = cur
+
+        for i in range(len(nums)):
+            if nums[i] != temp:
+                temp = nums[i]
+                nums[pointer] = nums[i]
+                pointer += 1
+
         
-        return result
+        return pointer
