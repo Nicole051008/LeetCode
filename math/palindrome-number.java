@@ -11,7 +11,7 @@ class Solution {
                 if (s.ChatAt(i) != s.CharAt(j)) {
                     return false;
                 }
-                break
+                break;
             }
         }
         return true;
