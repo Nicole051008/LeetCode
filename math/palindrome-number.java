@@ -8,7 +8,7 @@ class Solution {
 
         for (int i = 0; i < s.length() / 2; i++){
             for (int j = s.length(); i> s.length() / 2; i--){
-                if (s.ChatAt(i) != s.CharAt(j)) {
+                if (s.CharAt(i) != s.CharAt(j)) {
                     return false;
                 }
                 break;
