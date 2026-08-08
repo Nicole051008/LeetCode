@@ -9,18 +9,18 @@ public:
 
         // def pointer
         int cur_pos = n + m -1;
-        int num1_pos = m - 1;
-        int num2_pos = n - 1;
+        int nums1_pos = m - 1;
+        int nums2_pos = n - 1;
 
         for (int i = cur_pos; i >= 0; i --) {
-            if (num1[num1_pos] >= num2[num2_pos]) {
-                num1[cur_pos] = num1[num1_pos];
-                num1_pos --;
+            if (nums1[nums1_pos] >= nums2[nums2_pos]) {
+                nums1[cur_pos] = nums1[nums1_pos];
+                nums1_pos --;
             }
 
             else {
-                 num1[cur_pos] = num2[num2_pos];
-                 num2_pos --;
+                 nums1[cur_pos] = nums2[nums2_pos];
+                 nums2_pos --;
             }
         }
     }
