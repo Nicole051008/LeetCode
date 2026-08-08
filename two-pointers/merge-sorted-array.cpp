@@ -13,7 +13,13 @@ public:
         int nums2_pos = n - 1;
 
         for (int i = cur_pos; i >= 0; i --) {
-            if (nums1[nums1_pos] >= nums2[nums2_pos]) {
+
+            if (nums1_pos < 0) {
+                nums1[i] = nums2[nums2_pos];
+                nums2_pos--;
+            }
+
+            else if (nums1[nums1_pos] >= nums2[nums2_pos]) {
                 nums1[i] = nums1[nums1_pos];
                 nums1_pos --;
             }
@@ -21,7 +27,12 @@ public:
             else {
                  nums1[i] = nums2[nums2_pos];
                  nums2_pos --;
+                 if (nums2_pos == 0) {
+                    break;
+                 }
             }
+
+
         }
     }
 };
