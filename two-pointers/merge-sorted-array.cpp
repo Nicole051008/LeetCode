@@ -2,12 +2,9 @@ class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 
-        // check if any arrays are empty
-        if (m == 0) {
-            return nums2;
-        }
+        // check if num2 are empty
         if (n == 0) {
-            return num1;
+            return;
         }
 
         // def pointer
