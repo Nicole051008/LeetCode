@@ -27,7 +27,7 @@ public:
             else {
                  nums1[i] = nums2[nums2_pos];
                  nums2_pos --;
-                 if (nums2_pos == 0) {
+                 if (nums2_pos < 0) {
                     break;
                  }
             }
