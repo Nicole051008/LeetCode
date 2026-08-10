@@ -15,8 +15,19 @@
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
-        result.add(left.val);
-        result.add(root.val);
-        resutl.add(right.val);
+
+        List<Integer> result = new ArrayList<>();
+        inorder(root, result);
+        return result;
+
+        private void inorder(TreeNode root, List<Integer> result) {
+
+            if (root == null){
+                return;
+            }
+
+            result.add(left.val);
+            result.add(root.val);
+            resutl.add(right.val);
     }
 }
