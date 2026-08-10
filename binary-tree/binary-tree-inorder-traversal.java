@@ -20,14 +20,14 @@ class Solution {
         inorder(root, result);
         return result;
 
-        private void inorder(TreeNode root, List<Integer> result) {
+    private void inorder(TreeNode root, List<Integer> result) {
 
-            if (root == null){
-                return;
-            }
+        if (root == null){
+            return;
+        }
 
-            result.add(left.val);
-            result.add(root.val);
-            resutl.add(right.val);
+        result.add(left.val);
+        result.add(root.val);
+        resutl.add(right.val);
     }
 }
