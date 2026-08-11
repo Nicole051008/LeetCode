@@ -8,7 +8,7 @@ class Solution(object):
             return False
 
         s = str(x)
-        length = len(s)/2
+        length = len(s)//2
         
         for front_p in range(length):
             back_p = length - 1 - front_p
