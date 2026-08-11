@@ -14,4 +14,4 @@ class Solution(object):
             if x[front_p] != x[back_p]:
                 return False
         
-        return Frue
+        return True
