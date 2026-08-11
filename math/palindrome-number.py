@@ -7,7 +7,7 @@ class Solution(object):
         if x < 0 :
             return false
         
-        for front_p in len(str(x))/2:
+        for front_p in range(len(str(x))/2):
             back_p = len - 1 - front_p
             if x[front_p] != x[back_p]:
                 return false
