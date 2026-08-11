@@ -8,9 +8,9 @@ class Solution(object):
             return False
 
         s = str(x)
-        length = len(s)//2
+        length = len(s)
         
-        for front_p in range(length):
+        for front_p in range(length//2):
             back_p = length - 1 - front_p
             if s[front_p] != s[back_p]:
                 return False
