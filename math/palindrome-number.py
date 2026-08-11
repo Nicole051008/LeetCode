@@ -6,9 +6,11 @@ class Solution(object):
         """
         if x < 0 :
             return false
+
+        length = len(str(x))/2
         
-        for front_p in range(len(str(x))/2):
-            back_p = len - 1 - front_p
+        for front_p in range(length):
+            back_p = length - 1 - front_p
             if x[front_p] != x[back_p]:
                 return false
         
