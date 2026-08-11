@@ -7,11 +7,11 @@ class Solution(object):
         if x < 0 :
             return False
 
-        length = len(str(x))/2
+        s = str(x)
         
-        for front_p in range(length):
+        for front_p in range(s/2):
             back_p = length - 1 - front_p
-            if x[front_p] != x[back_p]:
+            if s[front_p] != s[back_p]:
                 return False
         
         return True
