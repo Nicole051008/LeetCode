@@ -10,7 +10,7 @@ public:
             p--;
         }
 
-        while (s[p] != ' ' && p >= 0){
+        while (p >= 0 && s[p] != ' '){
             p --;
             count ++;
         }
