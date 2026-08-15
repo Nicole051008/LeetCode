@@ -5,11 +5,10 @@ class Solution(object):
         :type val: int
         :rtype: int
         """
-        int count = 0
-        for (int i = 0; i < len(nums); i += 1){
-            if (nums[i] != val){
-                nums[count] = nums[i];
-                count += 1;
-            }
-        }
-        return count;
+        count = 0
+        for i in range(nums):
+            if nums[i] != val:
+                nums[count] = nums[i]
+                count += 1
+                
+        return count
