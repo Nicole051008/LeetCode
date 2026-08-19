@@ -1,6 +1,7 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
 
+        // init
         int len = nums.length;
 
         // check all the possible combination
@@ -11,6 +12,8 @@ class Solution {
                 }
             }
         }
+
+        // create and return empty list
         return new int[]{};
     }
 }
