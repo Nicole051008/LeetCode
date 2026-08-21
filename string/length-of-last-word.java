@@ -1,5 +1,6 @@
 class Solution {
-    public int lengthOfLastWord(String s) 
+    public int lengthOfLastWord(String s) {
+
         // init
         int length = s.length() - 1;
         int p = length;
