@@ -6,39 +6,45 @@ class Solution(object):
         :rtype: List[int]
         """
 
-    # init
-    found = False
-    left = 0
-    right = len(nums) - 1
+        # init
+        result = [-1, -1]
+        left = 0
+        right = len(nums) - 1
 
-    # binary search
-    while left <= right:
+        # binary search for starting position
+        while left <= right:
+            mid = (left + right) // 2
 
-        mid = (left + right) // 2
+            if nums[mid] == target:
+                result[0] = mid
+                right = mid - 1
 
-        # if founf
-        if nums[mid] == target:
+            # search right part
+            elif nums[mid] < target:
+                left = mid + 1
 
-            # set mid as the starting postion
-            result[0] = mid
+            # search left part
+            else:
+                right = mid - 1
 
-            # find ending position
-            for i in range(mid, right):
-                if nums[i] != target:
-                    result[1] = i - 1
-                    return result
+        # init
+        left = 0
+        right = len(nums) - 1
 
-            # the remain number are all targeted value
-            result[1] = len(nums) - 1
-            return result
+        # binary search for ending position
+        while left <= right:
+            mid = (left + right) // 2
 
-        # search right part
-        elif nums[mid] < target:
-            left = mid + 1
+            if nums[mid] == target:
+                result[1] = mid
+                left = mid + 1
 
-        # search left part
-        else:
-            right = mid - 1
-        
-    # not found
-    return [-1,-1]
+            # search right part
+            elif nums[mid] < target:
+                left = mid + 1
+
+            # search left part
+            else:
+                right = mid - 1
+
+        return result
