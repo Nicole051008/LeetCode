@@ -5,17 +5,17 @@ class Solution(object):
         :rtype: int
         """
     
-    # base cases
-    if n <= 2:
-        return n
+        # base cases
+        if n <= 2:
+            return n
     
-    # init
-    dp = [0] * (n + 1)
-    dp[1] = 1
-    dp[2] = 2
+        # init
+        dp = [0] * (n + 1)
+        dp[1] = 1
+        dp[2] = 2
 
-    # calculate number of ways
-    for i in range(3, n):
-        dp[i] = dp[i - 1] + dp[i - 2]
+        # calculate number of ways
+        for i in range(3, n):
+            dp[i] = dp[i - 1] + dp[i - 2]
 
-    return dp[n]
+        return dp[n]
