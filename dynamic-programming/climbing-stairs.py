@@ -15,7 +15,7 @@ class Solution(object):
         dp[2] = 2
 
         # calculate number of ways
-        for i in range(3, n):
+        for i in range(3, n + 1):
             dp[i] = dp[i - 1] + dp[i - 2]
 
         return dp[n]
