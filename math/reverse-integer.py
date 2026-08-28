@@ -1,25 +1,24 @@
 class Solution(object):
     def reverse(self, x):
-        
         """
         :type x: int
         :rtype: int
         """
 
-        # init
-        result = 0
+        # check negative number
+        if x < 0:
+            flag = nagative
 
-        while x != 0:
-            digit = int(x % 10) if x > 0 else -int((-x) % 10)
-            x = int(x / 10)
+        # convert to string
+        x_str = str(abs(x))
 
-            # check overflow
-            if result > 214748364 or (result == 214748364 and digit > 7):
-                return 0
+        # reverse the string
+        reversed_str = x_str[::-1]
 
-            if result < -214748364 or (result == -214748364 and digit < -8):
-                return 0
+        # convert back to int
+        result = int(reversed_str)
 
-            result = result * 10 + digit
+        if negative:
+            result = -result
 
         return result
