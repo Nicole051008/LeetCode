@@ -20,7 +20,7 @@ class Solution(object):
         # convert back to int
         result = int(reversed_str)
 
-        if not negative:
+        if not flag:
             result = -result
 
         return result
