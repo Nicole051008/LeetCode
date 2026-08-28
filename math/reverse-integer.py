@@ -5,11 +5,11 @@ class Solution(object):
         :rtype: int
         """
         # init
-        flag = positive
+        flag = 1
 
         # check negative number
         if x < 0:
-            flag = nagative
+            flag = 0
 
         # convert to string
         x_str = str(abs(x))
@@ -20,7 +20,7 @@ class Solution(object):
         # convert back to int
         result = int(reversed_str)
 
-        if negative:
+        if not negative:
             result = -result
 
         return result
