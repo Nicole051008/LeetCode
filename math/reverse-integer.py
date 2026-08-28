@@ -4,6 +4,8 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
+        # init
+        flag = 1
 
         # check negative number
         if x < 0:
