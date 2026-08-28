@@ -23,4 +23,7 @@ class Solution(object):
         if not flag:
             result = -result
 
+        if result < -2**31 or result > 2**31 - 1:
+            return 0
+
         return result
