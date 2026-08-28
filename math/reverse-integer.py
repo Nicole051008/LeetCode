@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         # init
-
         flag = positive
 
         # check negative number
