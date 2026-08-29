@@ -16,7 +16,7 @@ class Solution(object):
 
         def preorder(node):
             if node is None:
-                reutrn
+                return
             
             # root -> left -> right ->
             result.append(node.val)
