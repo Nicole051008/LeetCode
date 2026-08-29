@@ -21,7 +21,7 @@ class Solution(object):
             # root -> left -> right ->
             result.append(node.val)
             preorder(node.left)
-            preoder(node.right)
+            preorder(node.right)
         
         preorder(root)
 
