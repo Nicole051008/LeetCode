@@ -12,7 +12,7 @@ class Solution(object):
         """
         
         # init
-        result[]
+        result = []
 
         def preorder(node):
             if node is None:
