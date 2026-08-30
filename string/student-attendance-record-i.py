@@ -4,6 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+        
         # init
         absent = 0
         late = 0
