@@ -4,7 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        
+
         # init
         absent = 0
         late = 0
@@ -15,6 +15,7 @@ class Solution(object):
                 absent += 1
                 late = 0
 
+            # if late
             elif c == 'L':
                 late += 1
 
