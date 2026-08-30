@@ -12,9 +12,9 @@ class Solution(object):
         result = []
 
         for word in words:
-            if (letters.issubset(row1) or
-                letters.issubset(row2) or
-                letters.issubset(row3)):
+            letters = set(word)
+            if (letters.issubset(row1) or letters.issubset(row2) or letters.issubset(row3)):
                 result.append(word)
             
-            return result
+            
+        return result
