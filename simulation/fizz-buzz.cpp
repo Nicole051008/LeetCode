@@ -9,7 +9,7 @@ public:
         for (int i = 1; i < n; i ++){
 
             // if i divisible by 3 and 5
-            if (i % 3 == 0 || i % 5 == 0){
+            if (i % 3 == 0 && i % 5 == 0){
                 result.push_back("FizzBuzz");
             }
 
@@ -19,7 +19,7 @@ public:
             }
 
             // if i divisible by 5
-            if (i % 5 == 0){
+            else if (i % 5 == 0){
                 result.push_back("Buzz");
             }
 
