@@ -25,8 +25,8 @@ public:
 
             // satisfy none of the above conditions
             else{
-                n = to_string(x);  // convert int to str
-                result.push_back("n");
+                x = to_string(n);  // convert int to str
+                result.push_back("x");
             }
         }
 
