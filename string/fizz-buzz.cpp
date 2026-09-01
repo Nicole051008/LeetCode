@@ -6,7 +6,7 @@ public:
         vector<string> result;
 
         // append
-        for (int i = 0; i < n; i ++){
+        for (int i = 1; i < n; i ++){
 
             // if i divisible by 3 and 5
             if (i % 3 == 0 || i % 5 == 0){
