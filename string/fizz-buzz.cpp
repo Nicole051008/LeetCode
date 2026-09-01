@@ -6,7 +6,7 @@ public:
         vector<string> result;
 
         // append
-        for (int i = 1; i < n; i ++){
+        for (int i = 1; i <= n; i ++){
 
             // if i divisible by 3 and 5
             if (i % 3 == 0 && i % 5 == 0){
@@ -25,7 +25,7 @@ public:
 
             // satisfy none of the above conditions
             else{
-                string x = to_string(n);  // convert int to str
+                string x = to_string(i);  // convert int to str
                 result.push_back(x);
             }
         }
