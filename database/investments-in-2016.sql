@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-SELECT COUNT(tiv_2016)
+SELECT COUNT(tiv_2016) AS tiv_2016
 FROM Insurance
 WHERE tiv_2015 IN (
     SELECT tiv_2015
