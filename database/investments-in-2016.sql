@@ -10,6 +10,6 @@ WHERE tiv_2015 IN (
     AND (lat,lon) IN (
         SELECT lat, lon
         FROM Insurance
-        Group BY tiv_2015
+        Group BY lat, lon
         HAVING COUNT(*) = 1
     )
