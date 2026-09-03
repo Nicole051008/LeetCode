@@ -1,4 +1,15 @@
 # Write your MySQL query statement below
 SELECT COUNT(tiv_2016)
 FROM Insurance
-WHERE tiv_2015 = tiv_2016 AND (tiv_2015.lat != tiv_2016.lat OR tiv_2015.lon != tiv_2016.lon)
+WHERE tiv_2015 IN (
+    SELECT tiv_2015
+    FROM Insurance 
+    GROUP BY tiv_2015
+    HAVING COUNT(*) > 1
+    ) 
+    AND (lat,lon) IN (
+        SELECT lat, lon
+        FROM Insurance
+        Group BY tiv_2015
+        HAVING COUNT(*) = 1
+    )
