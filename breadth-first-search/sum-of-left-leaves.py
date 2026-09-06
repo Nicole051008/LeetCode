@@ -23,7 +23,7 @@ class Solution(object):
             sum += root.left.val
 
         # check subtree
-        result += self.sumOfLeftLeaves(root.left)
-        result += self.sumOfLeftLeaves(root.right)
+        sum += self.sumOfLeftLeaves(root.left)
+        sum += self.sumOfLeftLeaves(root.right)
 
         return sum
