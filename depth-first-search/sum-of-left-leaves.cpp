@@ -14,21 +14,24 @@ public:
     int sumOfLeftLeaves(TreeNode* root) {
 
         // return if root is empty
-        if (root == nullptr){
+        if (root == nullptr) {
             return 0;
         }
 
         int sum = 0;
 
-        if (root != nullptr &&  root -> left != nullptr){
-            sum += root -> left -> val;
+        // check if left child is a leaf
+        if (root->left != nullptr &&
+            root->left->left == nullptr &&
+            root->left->right == nullptr) {
+            sum += root->left->val;
         }
 
-        sum += sumOfLeftLeaves(root -> left);
+        // check left subtree
+        sum += sumOfLeftLeaves(root->left);
 
-        if (root -> right != nullptr){
-             sum += sumOfLeftLeaves(root -> right);
-        }
+        // check right subtree
+        sum += sumOfLeftLeaves(root->right);
 
         return sum;
     }
