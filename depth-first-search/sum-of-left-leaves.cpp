@@ -13,21 +13,21 @@ class Solution {
 public:
     int sumOfLeftLeaves(TreeNode* root) {
 
-        // return if node is empty
-        if (node == nullptr){
+        // return if root is empty
+        if (root == nullptr){
             return 0;
         }
 
         int sum = 0;
 
-        if (node != nullptr &&  node -> left != nullptr){
-            sum += node -> left -> val;
+        if (root != nullptr &&  root -> left != nullptr){
+            sum += root -> left -> val;
         }
 
-        sum += sumOfLeftLeaves(node -> left);
+        sum += sumOfLeftLeaves(root -> left);
 
-        if (node -> right != nullptr){
-             sum += sumOfLeftLeaves(node -> right);
+        if (root -> right != nullptr){
+             sum += sumOfLeftLeaves(root -> right);
         }
 
         return sum;
